@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/26 13:30:30 by yabuzaid          #+#    #+#             */
+/*   Updated: 2026/09/26 13:47:34 by yabuzaid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	while (len >= 0 && s[len] != (char) c)
+		len--;
+	if (s[len] == (char) c)
+		return (s + len);
+	return (0);
+}
+/*
+int main()
+{
+	char str[]="GeeksforGeeks";
+	printf("%s",ft_strrchr(str,'k'));
+}*/
