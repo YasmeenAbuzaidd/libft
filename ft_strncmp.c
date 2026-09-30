@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 17:17:43 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/25 17:17:59 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strncmp.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/25 17:17:43 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/09/30 19:25:38 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	count;
+	size_t	count;
 
 	count = 0;
 	while ((s1[count] || s2[count]) && count < n)
