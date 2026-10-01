@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 14:25:42 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/28 17:34:28 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/01 17:11:35 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,34 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*arr;
-	size_t	max_size;
+	size_t	total;
 
-	max_size = (size_t) - 1;
+	total = size * nmemb;
 	if (!nmemb || !size)
 	{
-		nmemb = 1;
-		size = 1;
+		arr = malloc(1);
+		if (!arr)
+			return (NULL);
+		return (arr);
 	}
-	if (nmemb > max_size / size)
-		return (0);
-	arr = malloc((nmemb * size) + 1);
+	if (total / nmemb != size || total / size != nmemb)
+		return (NULL);
+	arr = malloc(total + 1);
 	if (!arr)
-		return (0);
-	ft_bzero(arr, nmemb * size);
+		return (NULL);
+	ft_bzero(arr, total);
 	return (arr);
 }
-/*
+
+#include <stdio.h>
 int	main(void)
 {
 	int	numItems = 15;
-	int	*myArray = ft_calloc(numItems, sizeof(int));
-
+	char *s = ft_calloc(-3, sizeof(int));
+	if (s == NULL)
+		printf("its a NUL");
+	else
+		printf("idk");
 	for (int i = 0; i < numItems; i++)
 	{
 		myArray[i] = i + 1;
@@ -47,5 +53,5 @@ int	main(void)
 		printf("%d ", myArray[i]);
 	}
 	// Free the memory
-	free(myArray);
-}*/
+	//free(myArray);
+}

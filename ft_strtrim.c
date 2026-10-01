@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	start_count(char const *s1, char const *s2)
+static int	start_count(char const *s1, char const *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -41,7 +41,7 @@ int	start_count(char const *s1, char const *s2)
 	return (start);
 }
 
-int	end_count(char const *s1, char const *s2)
+static int	end_count(char const *s1, char const *s2)
 {
 	size_t	len1;
 	size_t	len2;
