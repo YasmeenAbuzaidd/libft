@@ -1,16 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/26 16:34:23 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/29 12:05:33 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strnstr.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/26 16:34:23 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 22:09:10 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -41,7 +40,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main()
 {
-	const char largestring[12] = "Foo Bar Baz";
-        const char smallstring[4] = "Bar";
-	printf("%s",ft_strnstr(largestring, smallstring, 17));
+const char largestring[12] = "Foo Bar Baz";
+const char smallstring[4] = "Bar";
+printf("%s",ft_strnstr(largestring, smallstring, 17));
 }*/

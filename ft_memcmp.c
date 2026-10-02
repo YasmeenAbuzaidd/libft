@@ -1,16 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/26 15:25:34 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/26 16:33:55 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memcmp.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/26 15:25:34 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 22:04:45 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -33,7 +32,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*
 int main()
 {
-	char s1[10]="greeks";
-	char s2[10]="geeks";
-	printf("%d",ft_memcmp(s1,s2,5));
+char s1[10]="greeks";
+char s2[10]="geeks";
+printf("%d",ft_memcmp(s1,s2,5));
 }*/

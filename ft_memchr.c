@@ -1,16 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/26 15:11:54 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/26 15:24:54 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memchr.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/26 15:11:54 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 22:04:37 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -28,8 +27,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 /*
 int main() {
-  char myStr[13] = "Hello World!";
-  char *myPtr = (char*)ft_memchr(myStr, 'o', 12);
-    printf("%s", myPtr);
-  return 0;
+char myStr[13] = "Hello World!";
+char *myPtr = (char*)ft_memchr(myStr, 'o', 12);
+printf("%s", myPtr);
+return 0;
 }*/

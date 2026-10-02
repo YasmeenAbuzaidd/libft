@@ -6,13 +6,13 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/09/29 12:51:52 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/09/30 19:08:13 by yabuzaid        ###   ########.fr        */
+/*   Updated: 2026/10/02 22:04:26 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	length(int num)
+static int	length(int num)
 {
 	int	len;
 
@@ -27,7 +27,7 @@ int	length(int num)
 	return (len);
 }
 
-void	fill(char *s, long num, int len, int *i)
+static void	fill(char *s, long num, int len, int *i)
 {
 	while (len--)
 	{

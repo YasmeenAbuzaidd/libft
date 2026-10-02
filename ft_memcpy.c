@@ -1,16 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 11:21:26 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/28 17:44:17 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memcpy.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/25 11:21:26 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 22:04:52 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
@@ -22,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (dest);
 	while (n--)
 	{
-		((unsigned char *)dest)[i] = ((const unsigned char *) src)[i];
+		((unsigned char *) dest)[i] = ((const unsigned char *) src)[i];
 		i++;
 	}
 	return (dest);
@@ -30,7 +29,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /*
 int main()
 {
-	char x[6]="Jazmmm";
-	char y[6];
-	printf("%s",ft_memcpy(y,x,3));
+char x[6]="Jazmmm";
+char y[6];
+printf("%s",ft_memcpy(y,x,3));
 }*/

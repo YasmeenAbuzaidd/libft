@@ -1,16 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 11:43:36 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/27 11:15:48 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memmove.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/25 11:43:36 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 22:04:58 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
@@ -42,8 +41,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /*
 int main()
 {
-	char str[]="1234567890";
-	char ss[]="1234567890";
-	printf("%s\n",ft_memmove(str+2,str,5));
-	printf("%s", memmove(ss+2,ss,5));
+char str[]="1234567890";
+char ss[]="1234567890";
+printf("%s\n",ft_memmove(str+2,str,5));
+printf("%s", memmove(ss+2,ss,5));
 }*/

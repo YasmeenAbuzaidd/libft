@@ -1,16 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/24 14:07:09 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/27 15:04:50 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memset.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/24 14:07:09 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 22:05:02 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -20,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
+		((unsigned char *) s)[i] = (unsigned char) c;
 		i++;
 	}
 	return (s);
@@ -28,6 +27,6 @@ void	*ft_memset(void *s, int c, size_t n)
 /*
 int main()
 {
-	char str[7]="Yasmeen";
-	printf("%s",ft_memset(str,'0',3));
+char str[7]="Yasmeen";
+printf("%s",ft_memset(str,'0',3));
 }*/

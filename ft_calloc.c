@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/27 14:25:42 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/01 17:11:35 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_calloc.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/27 14:25:42 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 22:03:19 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,31 +27,27 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	if (total / nmemb != size || total / size != nmemb)
 		return (NULL);
-	arr = malloc(total + 1);
+	arr = malloc(total);
 	if (!arr)
 		return (NULL);
 	ft_bzero(arr, total);
 	return (arr);
 }
-
-#include <stdio.h>
+/*
 int	main(void)
 {
-	int	numItems = 15;
-	char *s = ft_calloc(-3, sizeof(int));
-	if (s == NULL)
-		printf("its a NUL");
-	else
-		printf("idk");
-	for (int i = 0; i < numItems; i++)
-	{
-		myArray[i] = i + 1;
-	}
-	// Display the contents of the memory
-	for (int i = 0; i < numItems; i++)
-	{
-		printf("%d ", myArray[i]);
-	}
-	// Free the memory
-	//free(myArray);
+int	*arr;
+int	i;
+
+arr = ft_calloc(5, sizeof(int));
+if (!arr)
+return (1);
+i = 0;
+while (i < 5)
+{
+printf("%d ", arr[i]);
+i++;
 }
+free(arr);
+}
+*/
