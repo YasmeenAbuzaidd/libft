@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <yabuzaid@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/22 11:29:31 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/24 12:12:25 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_isalpha.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/22 11:29:31 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 23:45:12 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalpha(int num)
+int	ft_isalpha(int c)
 {
-	if (num >= 'a' && num <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (1);
-	if (num >= 'A' && num <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (1);
 	return (0);
 }
 /*
-int main()
+int	main(void)
 {
-	printf("%d",ft_isalpha('a'));
-	printf("%d",ft_isalpha(7));
-
-}*/
+printf("%d\n", ft_isalpha('A'));
+printf("%d", ft_isalpha(7));
+}
+*/
