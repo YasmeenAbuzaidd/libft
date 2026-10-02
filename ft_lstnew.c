@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/01 14:17:09 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/01 16:10:29 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_lstnew.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/10/01 14:17:09 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/02 13:29:17 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstnew(void *content)
 
 	s = malloc(sizeof(t_list));
 	if (!s)
-		return (0);
+		return (NULL);
 	s->content = content;
 	s->next = NULL;
 	return (s);
@@ -26,8 +26,8 @@ t_list	*ft_lstnew(void *content)
 /*
 int main()
 {
-	char *str="Hello";
-	t_list *s=ft_lstnew(str);
-	printf("%s",(char *)s->content);
-	free(s);
+char *str="Hello";
+t_list *s=ft_lstnew(str);
+printf("%s",(char *)s->content);
+free(s);
 }*/
