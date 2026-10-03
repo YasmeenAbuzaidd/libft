@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 16:56:02 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/03 17:23:35 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/03 17:32:37 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static size_t	end_count(char const *s1, char const *s2)
 
 	len1 = ft_strlen(s1) - 1;
 	end = len1 + 1;
-	while (len1 >= 0)
+	while (len1 == 0 || len1 > 0)
 	{
 		len2 = 0;
 		ok = 1;
@@ -82,7 +82,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	start = start_count(s1, set) + 1;
 	end = end_count(s1, set) - 1;
-	if (end == -1)
+	if (end + 1 == 0)
 		return (0);
 	if (start == end)
 	{
@@ -98,12 +98,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[end + 1] = '\0';
 	return (str);
 }
-/*
+#include <stdio.h>
 int	main(void)
 {
-	const char	str[40] = "     pppp   ";
+	const char	str[40] = "abcdppp";
 	const char	s[10] = "pppp";
 
 	printf("%s", ft_strtrim(str, s));
 }
-*/
