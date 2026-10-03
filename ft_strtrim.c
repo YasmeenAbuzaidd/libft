@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 16:56:02 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/29 12:49:42 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/03 17:23:35 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	start_count(char const *s1, char const *s2)
+static size_t	start_count(char const *s1, char const *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -20,7 +20,7 @@ static int	start_count(char const *s1, char const *s2)
 	size_t	ok;
 
 	i = 0;
-	ok = 1;
+	start = 0;
 	while (i < ft_strlen(s1))
 	{
 		j = 0;
@@ -41,7 +41,7 @@ static int	start_count(char const *s1, char const *s2)
 	return (start);
 }
 
-static int	end_count(char const *s1, char const *s2)
+static size_t	end_count(char const *s1, char const *s2)
 {
 	size_t	len1;
 	size_t	len2;
@@ -49,8 +49,8 @@ static int	end_count(char const *s1, char const *s2)
 	size_t	end;
 
 	len1 = ft_strlen(s1) - 1;
-	ok = 1;
-	while (len1)
+	end = len1 + 1;
+	while (len1 >= 0)
 	{
 		len2 = 0;
 		ok = 1;
@@ -80,29 +80,30 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (0);
 	i = 0;
-	start = start_count(s1, set);
-	end = end_count(s1, set);
-	if (start > end)
+	start = start_count(s1, set) + 1;
+	end = end_count(s1, set) - 1;
+	if (end == -1)
 		return (0);
-	else if (start == end)
+	if (start == end)
 	{
-		str = malloc (2 * sizeof(char));
-		str[0] = (char *)s1[start];
+		str = malloc(2 * sizeof(char));
+		str[0] = (char) s1[start];
 		str[1] = '\0';
 		return (str);
 	}
 	else
-		str = malloc(((end--) - start + 1) * sizeof(char));
-	while (start++ < end)
-		str[i++] = (char *)s1[start];
-	str[i] = '\0';
+		str = malloc(end - start + 2);
+	while (start <= end)
+		str[i++] = (char) s1[start++];
+	str[end + 1] = '\0';
 	return (str);
 }
 /*
-int main()
+int	main(void)
 {
-	const char str[]="aazYasmeenzaa";
-	const char s[]="az";
-	printf("%s",ft_strtrim(str,s));
+	const char	str[40] = "     pppp   ";
+	const char	s[10] = "pppp";
+
+	printf("%s", ft_strtrim(str, s));
 }
 */
