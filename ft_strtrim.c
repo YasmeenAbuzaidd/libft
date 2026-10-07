@@ -1,108 +1,105 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/28 16:56:02 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/03 17:32:37 by yabuzaid         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strtrim.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/28 16:56:02 by yabuzaid         #+#    #+#              */
+/*   Updated: 2026/10/07 08:49:22 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
-static size_t	start_count(char const *s1, char const *s2)
+static int	is_set(char *set, char c)
 {
-	size_t	i;
-	size_t	j;
-	size_t	start;
-	size_t	ok;
+	int	i;
+	int	flag;
 
 	i = 0;
-	start = 0;
-	while (i < ft_strlen(s1))
+	flag = 0;
+	while (set[i])
 	{
-		j = 0;
-		ok = 1;
-		while (j < ft_strlen(s2) && ok)
-		{
-			if (s1[i] != s2[j])
-				j++;
-			else
-				ok = 0;
-		}
-		if (!ok)
-			start = i;
-		else
-			return (start);
+		if (set[i] == c)
+			flag = 1;
 		i++;
 	}
-	return (start);
+	return (flag);
 }
 
-static size_t	end_count(char const *s1, char const *s2)
+static int	start(char *str, char *set)
 {
-	size_t	len1;
-	size_t	len2;
-	size_t	ok;
-	size_t	end;
+	int	i;
 
-	len1 = ft_strlen(s1) - 1;
-	end = len1 + 1;
-	while (len1 == 0 || len1 > 0)
+	i = 0;
+	while (str[i])
 	{
-		len2 = 0;
-		ok = 1;
-		while (len2 < ft_strlen(s2) && ok)
-		{
-			if (s1[len1] != s2[len2])
-				len2++;
-			else
-				ok = 0;
-		}
-		if (!ok)
-			end = len1;
+		if (is_set(set, str[i]))
+			i++;
 		else
-			return (end);
-		len1--;
+			break ;
 	}
-	return (end);
+	return (i);
+}
+
+static int	end(char *str, char *set)
+{
+	int	i;
+
+	i = ft_strlen(str) - 1;
+	while (i >= 0)
+	{
+		if (is_set(set, str[i]))
+			i--;
+		else
+			break ;
+	}
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	end;
-	size_t	i;
 	char	*str;
+	int		begin;
+	int		rbegin;
+	int		total_len;
+	int		i;
 
-	if (!s1)
-		return (0);
 	i = 0;
-	start = start_count(s1, set) + 1;
-	end = end_count(s1, set) - 1;
-	if (end + 1 == 0)
-		return (0);
-	if (start == end)
+	begin = start((char *) s1, (char *) set);
+	rbegin = end((char *) s1, (char *) set);
+	total_len = rbegin - begin + 1;
+	str = malloc(total_len + 1);
+	if (!str)
+		return (NULL);
+	while (begin <= rbegin)
 	{
-		str = malloc(2 * sizeof(char));
-		str[0] = (char) s1[start];
-		str[1] = '\0';
-		return (str);
+		str[i] = s1[begin];
+		begin++;
+		i++;
 	}
-	else
-		str = malloc(end - start + 2);
-	while (start <= end)
-		str[i++] = (char) s1[start++];
-	str[end + 1] = '\0';
+	str[i] = '\0';
 	return (str);
 }
-#include <stdio.h>
+/*
 int	main(void)
 {
-	const char	str[40] = "abcdppp";
-	const char	s[10] = "pppp";
+char	str[1000];
+char	s[100];
 
-	printf("%s", ft_strtrim(str, s));
+str[0] = 'U';
+str[1] = 'J';
+str[2] = 'A';
+str[3] = 'Z';
+str[4] = 'T';
+str[5] = '\0';
+s[0] = 'J';
+s[1] = 'A';
+s[2] = 'Z';
+s[3] = '\0';
+printf("%s\n", ft_strtrim(str, s));
 }
+// HI MY NAME IS HI
+*/
