@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 10:42:44 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/03 21:18:48 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/10 15:20:24 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		if (substr == NULL)
 			return (NULL);
 		while (len--)
-			substr[i++] = (char *)s[start++];
+			substr[i++] = s[start++];
 	}
 	return (substr);
 }

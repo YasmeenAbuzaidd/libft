@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 14:26:48 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/03 21:17:35 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/10 15:18:06 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	str = malloc((len1 + len2) * sizeof(char));
+	str = malloc((len1 + len2 + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	while (i < len1)
 	{
-		str[i] = (char *)s1[i];
+		str[i] = s1[i];
 		i++;
 	}
 	while (j < len2)
-	{
-		str[i] = (char *)s2[j];
-		i++;
-		j++;
-	}
+		str[i++] = s2[j++];
+	str[i] = '\0';
 	return (str);
 }
 /*

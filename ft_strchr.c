@@ -6,7 +6,7 @@
 /*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/26 12:56:17 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/26 13:29:12 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/10 15:15:05 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != (char)c && s[i])
 		i++;
 	if (s[i] == (char)c)
-		return (s + i);
+		return ((char *)s + i);
 	else
 		return (0);
 }
