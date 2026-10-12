@@ -12,8 +12,6 @@ Implementing these functions from scratch helps develop a strong understanding o
 
 The final result is a reusable static library called `libft.a` that can be used in future C projects.
 
----
-
 ## Library Overview
 
 The library is divided into three main parts:
@@ -23,8 +21,6 @@ The library is divided into three main parts:
 - **Linked-list functions** — functions for creating and manipulating singly linked lists.
 
 All functions follow the 42 coding standards.
-
----
 
 ## Functions
 
@@ -130,37 +126,43 @@ Each node contains a generic `void *` content pointer and a pointer to the next 
 
 The project uses a `Makefile` to compile the source files into the static library `libft.a`.
 
-#### Compile
+**Compile the mandatory functions:**
 
 ```bash
 make
 ```
 
-#### Remove object files
+**Compile the library with bonus functions:**
+
+```bash
+make bonus
+```
+
+**Remove object files:**
 
 ```bash
 make clean
 ```
 
-#### Remove object files and the library
+**Remove object files and the library:**
 
 ```bash
 make fclean
 ```
 
-#### Recompile
+**Recompile the mandatory part from scratch:**
 
 ```bash
 make re
 ```
 
-The Makefile uses:
+The Makefile uses the following compiler flags:
 
 ```text
 -Wall -Wextra -Werror
 ```
 
-and creates the library using `ar`.
+The library is created using `ar`.
 
 ### Usage
 
@@ -188,7 +190,7 @@ int main(void)
 }
 ```
 
-Then run:
+Run the program:
 
 ```bash
 ./program
