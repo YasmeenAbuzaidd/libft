@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                       :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/09/26 15:11:54 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/10/10 15:14:20 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/13 02:02:15 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	news = (char *) s;
-	while (news[i] && news[i] != (char) c && i < n)
+	while (i < n && (unsigned char) news[i] != (unsigned char) c)
 		i++;
-	if (news[i] == (char) c)
-		return ((void *)s + i);
-	return (0);
+	if (i < n)
+		return ((void *)((char *) s + i));
+	return (NULL);
 }
 /*
 int main() {

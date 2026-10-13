@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/09/26 16:34:23 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/10/02 22:09:10 by yabuzaid        ###   ########.fr        */
+/*   Updated: 2026/10/13 07:42:52 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		llen++;
 	while (big[count] && len > count)
 	{
-		while (big[count + inner_count]
+		while (count + inner_count < len && big[count + inner_count]
+			&& little[inner_count]
 			&& big[count + inner_count] == little[inner_count])
 			inner_count++;
 		if (inner_count == llen)
@@ -35,7 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		count++;
 		inner_count = 0;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 int main()

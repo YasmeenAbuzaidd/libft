@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/09/26 15:25:34 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/10/02 22:04:45 by yabuzaid        ###   ########.fr        */
+/*   Updated: 2026/10/13 02:03:22 by yabuzaid        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	char	*s11;
-	char	*s22;
+	size_t			i;
+	unsigned char	*s11;
+	unsigned char	*s22;
 
 	i = 0;
-	s11 = (char *) s1;
-	s22 = (char *) s2;
+	s11 = (unsigned char *) s1;
+	s22 = (unsigned char *) s2;
 	while (i < n)
 	{
 		if (s11[i] != s22[i])
