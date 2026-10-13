@@ -16,25 +16,49 @@ int	ft_atoi(const char *nptr)
 {
 	int	res;
 	int	i;
+	int	sign;
 
 	res = 0;
 	i = 0;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	sign = 1;
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
+		i++;
+	if (nptr[i] == '-')
 	{
+		sign = -1;
 		i++;
 	}
+	else if (nptr[i] == '+')
+		i++;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		res = res * 10 + (nptr[i] - '0');
 		i++;
 	}
-	if (nptr[0] == '-')
-		res = res * -1;
-	return (res);
+	return (res * sign);
 }
 /*
+#include <stdio.h>
+
 int main()
 {
-	char str[6]="abcd";
-	printf("%d", ft_atoi(str));
-}*/
+	printf("%d\n", ft_atoi("42"));
+printf("%d\n", ft_atoi("-42"));
+printf("%d\n", ft_atoi("+42"));
+printf("%d\n", ft_atoi("   123"));
+printf("%d\n", ft_atoi("\t\n  56"));
+printf("%d\n", ft_atoi("42abc"));
+printf("%d\n", ft_atoi("abc42"));
+printf("%d\n", ft_atoi("--42"));
+printf("%d\n", ft_atoi("+-42"));
+printf("%d\n", ft_atoi("  -123abc"));
+printf("%d\n", ft_atoi("0"));
+printf("%d\n", ft_atoi(""));
+printf("%d\n", ft_atoi("   "));
+printf("%d\n", ft_atoi("+"));
+printf("%d\n", ft_atoi("-"));
+printf("%d\n", ft_atoi("214"));
+printf("%d\n", ft_atoi("12 34"));
+printf("%d\n", ft_atoi("00042"));
+}
+*/
