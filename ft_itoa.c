@@ -57,8 +57,8 @@ char	*ft_itoa(int n)
 	else
 		sign = '+';
 	s = malloc((len + 1) * sizeof(char));
-	if (s == 0)
-		return (0);
+	if (s == NULL)
+		return (NULL);
 	fill(s, num, len, &i);
 	if (sign == '-')
 		s[0] = '-';

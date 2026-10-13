@@ -17,10 +17,13 @@ void	ft_putnbr_fd(int n, int fd)
 	char	*str;
 
 	str = ft_itoa(n);
+	if (!str)
+		return ;
 	ft_putstr_fd(str, fd);
 	free(str);
 }
 /*
+free(str) -> frees the memory allocated by ft_itoa to prevent a memory leak.
 int	main(void)
 {
 ft_putnbr_fd(0, 1);
