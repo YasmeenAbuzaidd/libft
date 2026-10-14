@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yabuzaid <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/26 17:22:07 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/09/26 17:31:33 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/14 14:49:54 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 
 int main()
 {
-	printf("%d\n", ft_atoi("42"));
+	printf("%d\n", ft_atoi("-2147483648"));
 printf("%d\n", ft_atoi("-42"));
 printf("%d\n", ft_atoi("+42"));
 printf("%d\n", ft_atoi("   123"));
@@ -60,5 +60,4 @@ printf("%d\n", ft_atoi("-"));
 printf("%d\n", ft_atoi("214"));
 printf("%d\n", ft_atoi("12 34"));
 printf("%d\n", ft_atoi("00042"));
-}
-*/
+}*/

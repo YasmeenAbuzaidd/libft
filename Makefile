@@ -12,34 +12,28 @@ SOURCES = ft_atoi.c ft_bzero.c ft_calloc.c \
 	ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c \
 	ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 	ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
-	ft_split.c
-
-BSOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+	ft_split.c \
+	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 	ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 	ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
+
 OBJECTS = $(SOURCES:.c=.o)
-BOBJECTS = $(BSOURCES:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	$(RM) $(NAME)
 	$(AR) rcs $(NAME) $(OBJECTS)
-
-bonus: $(OBJECTS) $(BOBJECTS)
-	$(RM) $(NAME)
-	$(AR) rcs $(NAME) $(OBJECTS) $(BOBJECTS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJECTS) $(BOBJECTS)
+	$(RM) $(OBJECTS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

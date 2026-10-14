@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_strncmp.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/09/25 17:17:43 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/09/30 19:25:38 by yabuzaid        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/25 17:17:43 by yabuzaid          #+#    #+#             */
+/*   Updated: 2026/10/14 14:51:15 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	count;
+	size_t			count;
+	unsigned char	*s1l;
+	unsigned char	*s2l;
 
+	s1l = (unsigned char *) s1;
+	s2l = (unsigned char *) s2;
 	count = 0;
-	while ((s1[count] || s2[count]) && count < n)
+	while ((s1l[count] || s2l[count]) && count < n)
 	{
-		if (s1[count] - s2[count])
-			return ((s1[count] - s2[count]));
+		if (s1l[count] - s2l[count])
+			return ((s1l[count] - s2l[count]));
 		count++;
 	}
 	return (0);
