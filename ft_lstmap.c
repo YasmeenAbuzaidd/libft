@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_lstmap.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/02 20:34:44 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/10/02 21:40:40 by yabuzaid        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/02 20:34:44 by yabuzaid          #+#    #+#             */
+/*   Updated: 2026/10/14 12:27:01 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ new[i] = '\0';
 return (new);
 }
 
-void	del(void *content)
+void del(void *content)
 {
-(void) content;
+    free(content);
 }
 
 int	main(void)
