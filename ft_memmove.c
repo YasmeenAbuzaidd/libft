@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_memmove.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/09/25 11:43:36 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/10/13 01:50:38 by yabuzaid        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/25 11:43:36 by yabuzaid          #+#    #+#             */
+/*   Updated: 2026/10/14 14:32:34 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t		i;
 
 	i = 0;
-	if (!dest && !src)
-		return (dest);
 	destt = (char *) dest;
 	srcc = (const char *) src;
 	if (destt <= srcc)

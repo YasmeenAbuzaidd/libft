@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_lstmap.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/02 20:34:44 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/10/02 21:40:40 by yabuzaid        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/02 20:34:44 by yabuzaid          #+#    #+#             */
+/*   Updated: 2026/10/14 14:51:42 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	unsigned int	len;
 	t_list			*new;
 	t_list			*new_list;
+	void			*content;
 
 	len = ft_lstsize(lst);
 	new_list = NULL;
@@ -24,9 +25,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	while (len--)
 	{
-		new = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		new = ft_lstnew(content);
 		if (!new)
 		{
+			del(content);
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
@@ -61,9 +64,9 @@ new[i] = '\0';
 return (new);
 }
 
-void	del(void *content)
+void del(void *content)
 {
-(void) content;
+    free(content);
 }
 
 int	main(void)

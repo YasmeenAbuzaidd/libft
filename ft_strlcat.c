@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_strlcat.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/09/26 13:54:43 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/09/30 21:03:14 by yabuzaid        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/26 13:54:43 by yabuzaid          #+#    #+#             */
+/*   Updated: 2026/10/14 14:44:47 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (total_length);
 }
 /*
+#include <bsd/string.h>
 #include <stdio.h>
 
 int	main(void)
@@ -47,11 +48,11 @@ int	main(void)
 const char	source[7];
 char		destination[10];
 const char	sourc[7] = "abcdef";
-char		destinatio[10] = "hi";
+char		destinatio[] = "marah";
 
-printf("%zu\n", ft_strlcat(destination, source, 5));
-printf("%s", destination);
-// printf("%zu\n", strlcat(destinatio, sourc, 5));
-// printf("%s", destinatio);
+printf("%zu\n", ft_strlcat(destinatio, sourc, 5));
+printf("%s", destinatio);
+//printf("%zu\n", strlcat(destinatio, sourc, 5));
+ //printf("%s", destinatio);
 }
 */
