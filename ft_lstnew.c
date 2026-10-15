@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_lstnew.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: yabuzaid <yabuzaid@student.42amman.com>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/01 14:17:09 by yabuzaid         #+#    #+#              */
-/*   Updated: 2026/10/02 13:29:17 by yabuzaid        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/01 14:17:09 by yabuzaid          #+#    #+#             */
+/*   Updated: 2026/10/15 17:42:13 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ t_list	*ft_lstnew(void *content)
 	return (s);
 }
 /*
+#include <stdio.h>
 int main()
 {
-char *str="Hello";
-t_list *s=ft_lstnew(str);
+t_list *s=ft_lstnew("Hello");
 printf("%s",(char *)s->content);
 free(s);
-}*/
+}
+*/
