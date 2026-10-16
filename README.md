@@ -28,69 +28,69 @@ All functions follow the 42 coding standards.
 
 #### Character Classification
 
-| Function     | Description                                                    |
-| ------------ | -------------------------------------------------------------- |
-| `ft_isalpha` | Checks whether a character is alphabetic.                      |
-| `ft_isdigit` | Checks whether a character is a decimal digit.                 |
-| `ft_isalnum` | Checks whether a character is alphanumeric.                    |
+| Function | Description |
+|---|---|
+| `ft_isalpha` | Checks whether a character is alphabetic. |
+| `ft_isdigit` | Checks whether a character is a decimal digit. |
+| `ft_isalnum` | Checks whether a character is alphanumeric. |
 | `ft_isascii` | Checks whether a character belongs to the ASCII character set. |
-| `ft_isprint` | Checks whether a character is printable.                       |
+| `ft_isprint` | Checks whether a character is printable. |
 
 #### String Functions
 
-| Function     | Description                                                     |
-| ------------ | --------------------------------------------------------------- |
-| `ft_strlen`  | Calculates the length of a string.                              |
-| `ft_strchr`  | Finds the first occurrence of a character in a string.          |
-| `ft_strrchr` | Finds the last occurrence of a character in a string.           |
-| `ft_strncmp` | Compares two strings up to a specified number of characters.    |
-| `ft_strnstr` | Searches for a substring within a string.                       |
+| Function | Description |
+|---|---|
+| `ft_strlen` | Calculates the length of a string. |
+| `ft_strchr` | Finds the first occurrence of a character in a string. |
+| `ft_strrchr` | Finds the last occurrence of a character in a string. |
+| `ft_strncmp` | Compares two strings up to a specified number of characters. |
+| `ft_strnstr` | Searches for a substring within a string. |
 | `ft_strlcpy` | Copies a string into a destination buffer with size protection. |
-| `ft_strlcat` | Appends a string to a destination buffer with size protection.  |
+| `ft_strlcat` | Appends a string to a destination buffer with size protection. |
 
 #### Memory Functions
 
-| Function     | Description                                       |
-| ------------ | ------------------------------------------------- |
-| `ft_memset`  | Fills a block of memory with a specified byte.    |
-| `ft_bzero`   | Sets a block of memory to zero.                   |
-| `ft_memcpy`  | Copies a block of memory.                         |
+| Function | Description |
+|---|---|
+| `ft_memset` | Fills a block of memory with a specified byte. |
+| `ft_bzero` | Sets a block of memory to zero. |
+| `ft_memcpy` | Copies a block of memory. |
 | `ft_memmove` | Copies memory while handling overlapping regions. |
-| `ft_memchr`  | Searches for a byte within a block of memory.     |
-| `ft_memcmp`  | Compares two blocks of memory.                    |
+| `ft_memchr` | Searches for a byte within a block of memory. |
+| `ft_memcmp` | Compares two blocks of memory. |
 
 #### Character Conversion
 
-| Function     | Description                                   |
-| ------------ | --------------------------------------------- |
-| `ft_toupper` | Converts a lowercase character to uppercase.  |
+| Function | Description |
+|---|---|
+| `ft_toupper` | Converts a lowercase character to uppercase. |
 | `ft_tolower` | Converts an uppercase character to lowercase. |
 
 #### Conversion and Allocation
 
-| Function    | Description                                       |
-| ----------- | ------------------------------------------------- |
-| `ft_atoi`   | Converts a string to an integer.                  |
-| `ft_calloc` | Allocates memory and initializes it to zero.      |
+| Function | Description |
+|---|---|
+| `ft_atoi` | Converts a string to an integer. |
+| `ft_calloc` | Allocates memory and initializes it to zero. |
 | `ft_strdup` | Creates a dynamically allocated copy of a string. |
 
 ### 2. Additional Functions
 
 These functions extend the functionality of the standard C library.
 
-| Function        | Description                                                          |
-| --------------- | -------------------------------------------------------------------- |
-| `ft_substr`     | Creates a substring from a string.                                   |
-| `ft_strjoin`    | Concatenates two strings into a newly allocated string.              |
-| `ft_strtrim`    | Removes specified characters from the beginning and end of a string. |
-| `ft_split`      | Splits a string into an array of strings using a delimiter.          |
-| `ft_itoa`       | Converts an integer into a dynamically allocated string.             |
-| `ft_strmapi`    | Applies a function to each character and returns a new string.       |
-| `ft_striteri`   | Applies a function to each character of a string in place.           |
-| `ft_putchar_fd` | Writes a character to a file descriptor.                             |
-| `ft_putstr_fd`  | Writes a string to a file descriptor.                                |
-| `ft_putendl_fd` | Writes a string followed by a newline to a file descriptor.          |
-| `ft_putnbr_fd`  | Writes an integer to a file descriptor.                              |
+| Function | Description |
+|---|---|
+| `ft_substr` | Creates a substring from a string. |
+| `ft_strjoin` | Concatenates two strings into a newly allocated string. |
+| `ft_strtrim` | Removes specified characters from the beginning and end of a string. |
+| `ft_split` | Splits a string into an array of strings using a delimiter. |
+| `ft_itoa` | Converts an integer into a dynamically allocated string. |
+| `ft_strmapi` | Applies a function to each character and returns a new string. |
+| `ft_striteri` | Applies a function to each character of a string in place. |
+| `ft_putchar_fd` | Writes a character to a file descriptor. |
+| `ft_putstr_fd` | Writes a string to a file descriptor. |
+| `ft_putendl_fd` | Writes a string followed by a newline to a file descriptor. |
+| `ft_putnbr_fd` | Writes an integer to a file descriptor. |
 
 ### 3. Linked List Functions
 
@@ -100,23 +100,23 @@ The project also includes a singly linked-list implementation:
 typedef struct s_list
 {
     void            *content;
-    struct s_list    *next;
+    struct s_list   *next;
 }   t_list;
 ```
 
 Each node contains a generic `void *` content pointer and a pointer to the next node.
 
-| Function          | Description                                                        |
-| ----------------- | ------------------------------------------------------------------ |
-| `ft_lstnew`       | Allocates and initializes a new list node.                         |
-| `ft_lstadd_front` | Adds a node to the beginning of a list.                            |
-| `ft_lstsize`      | Counts the number of nodes in a list.                              |
-| `ft_lstlast`      | Returns the last node of a list.                                   |
-| `ft_lstadd_back`  | Adds a node to the end of a list.                                  |
-| `ft_lstdelone`    | Deletes one node and its content.                                  |
-| `ft_lstclear`     | Deletes an entire list and frees its contents.                     |
-| `ft_lstiter`      | Applies a function to every node's content.                        |
-| `ft_lstmap`       | Creates a new list by applying a function to every node's content. |
+| Function | Description |
+|---|---|
+| `ft_lstnew` | Allocates and initializes a new list node. |
+| `ft_lstadd_front` | Adds a node to the beginning of a list. |
+| `ft_lstsize` | Counts the number of nodes in a list. |
+| `ft_lstlast` | Returns the last node in a list. |
+| `ft_lstadd_back` | Adds a node to the end of a list. |
+| `ft_lstdelone` | Deletes one node and its content. |
+| `ft_lstclear` | Deletes an entire list and frees its contents. |
+| `ft_lstiter` | Applies a function to every node's content. |
+| `ft_lstmap` | Creates a new list by applying a function to every node's content. |
 
 ---
 
@@ -126,16 +126,10 @@ Each node contains a generic `void *` content pointer and a pointer to the next 
 
 The project uses a `Makefile` to compile the source files into the static library `libft.a`.
 
-**Compile the mandatory functions:**
+**Compile the library:**
 
 ```bash
 make
-```
-
-**Compile the library with bonus functions:**
-
-```bash
-make bonus
 ```
 
 **Remove object files:**
@@ -150,7 +144,7 @@ make clean
 make fclean
 ```
 
-**Recompile the mandatory part from scratch:**
+**Recompile the library from scratch:**
 
 ```bash
 make re
@@ -175,7 +169,7 @@ Include the library header in your C project:
 Compile your program with the library:
 
 ```bash
-cc main.c -L. -lft -o program
+cc main.c libft.a -o program
 ```
 
 Example:
@@ -195,54 +189,19 @@ Run the program:
 ```bash
 ./program
 ```
-
----
-
-## Technical Choices
-
-### Dynamic Memory
-
-Functions that create new strings or data structures use dynamic memory allocation with `malloc`. Allocated memory is released when it is no longer needed.
-
-### Generic Data
-
-The linked-list implementation uses `void *content`, allowing nodes to store different types of data.
-
-### Function Pointers
-
-Functions such as `ft_strmapi`, `ft_striteri`, `ft_lstiter`, and `ft_lstmap` use function pointers to apply custom behaviour to strings or list contents.
-
-### Static Functions
-
-Helper functions that are only needed inside a source file are declared as `static` to limit their scope.
-
-### Defensive Programming
-
-The functions handle relevant edge cases such as `NULL` pointers, empty strings, allocation failures, empty lists, and boundary conditions.
-
 ---
 
 ## Resources
 
-### Documentation
+- [GeeksforGeeks](https://www.geeksforgeeks.org/) — C programming concepts, pointers, memory management, and linked lists.
+- [W3Schools](https://www.w3schools.com/c/) — C syntax, strings, arrays, and pointers.
+- [Linux man-pages](https://man7.org/linux/man-pages/) — Used as a reference for function documentation and behavior.
 
-- C reference: https://en.cppreference.com/w/c
-- GNU C Library: https://www.gnu.org/software/libc/manual/
-- `malloc`: https://man7.org/linux/man-pages/man3/malloc.3.html
-- `memcpy` / `memmove`: https://man7.org/linux/man-pages/man3/memcpy.3.html
-- `write`: https://man7.org/linux/man-pages/man2/write.2.html
-- `ar`: https://sourceware.org/binutils/docs/binutils/ar.html
+These resources helped support learning about C programming, compilation, and build tools.
 
-### 42 Resources
+## AI Usage
 
-- 42 Network: https://42network.org/
-- 42 Intra: https://profile.intra.42.fr/
-
-The project specification and coding requirements were provided through the 42 curriculum.
-
-### AI Usage
-
-AI was used as a learning and support tool during the project. It was used to clarify C programming concepts, help with debugging, explain functions and edge cases, and assist with organizing the README documentation.
+AI was used as a learning and support tool during the project. It helped clarify C programming concepts, explain functions and edge cases, troubleshoot implementation issues, and organize the README documentation.
 
 The project code was written and tested by me.
 
@@ -251,4 +210,5 @@ The project code was written and tested by me.
 ## Author
 
 **Yasmeen Abuzaid**
+
 42 Amman — `yabuzaid`
