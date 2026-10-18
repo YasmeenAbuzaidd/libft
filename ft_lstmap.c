@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 20:34:44 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/14 14:51:42 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/18 18:35:18 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list			*new_list;
 	void			*content;
 
-	len = ft_lstsize(lst);
-	new_list = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
+	len = ft_lstsize(lst);
+	new_list = NULL;
 	while (len--)
 	{
 		content = f(lst->content);
