@@ -67,6 +67,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	begin = start(s1, set);
 	rbegin = end(s1, set);
 	if (begin > rbegin)
@@ -76,21 +80,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!str)
 		return (NULL);
 	while (begin <= rbegin)
-	{
-		str[i] = s1[begin];
-		begin++;
-		i++;
-	}
+		str[i++] = s1[begin++];
 	str[i] = '\0';
 	return (str);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char	str[1000] = "UJAZ";
 	char	s[100] = "JAZ";
 
-	printf("%s\n", ft_strtrim(str, s));
+	printf("%s\n", ft_strtrim(str, NULL));
 }
 // HI MY NAME IS HI
 */
