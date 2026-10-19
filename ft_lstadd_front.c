@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 15:28:57 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/15 17:55:11 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/19 10:29:24 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (new == NULL)
+	if (!new || !lst)
 		return ;
 	new->next = *lst;
 	*lst = new;

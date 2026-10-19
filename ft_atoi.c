@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/26 17:22:07 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/14 14:49:54 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/19 09:43:49 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	res;
-	int	i;
-	int	sign;
+	long	res;
+	int		i;
+	int		sign;
 
 	res = 0;
 	i = 0;

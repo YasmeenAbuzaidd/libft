@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 20:34:44 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/18 18:35:18 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/10/19 09:28:20 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,27 +41,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 /*
 #include <stdio.h>
 
-void	*to_upper(void *content)
+void	*hi(void *content)
 {
-char	*str;
-char	*new;
-int		i;
-
-str = (char *) content;
-i = 0;
-new = malloc(ft_strlen(str) + 1);
-if (!new)
-return (NULL);
-while (str[i])
-{
-if (str[i] >= 'a' && str[i] <= 'z')
-new[i] = str[i] - 32;
-else
-new[i] = str[i];
-i++;
-}
-new[i] = '\0';
-return (new);
+	return("Hi");
 }
 
 void del(void *content)
@@ -81,7 +63,7 @@ b = ft_lstnew("Yasmeen");
 c = ft_lstnew("Jasmine");
 a->next = b;
 b->next = c;
-new_list = ft_lstmap(a, to_upper, del);
+new_list = ft_lstmap(a, hi, del);
 printf("Original:\n");
 printf("%s\n", (char *) a->content);
 printf("%s\n", (char *) a->next->content);
